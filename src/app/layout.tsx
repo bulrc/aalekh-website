@@ -11,7 +11,7 @@ import { ScrollToTop } from "@/components/scroll-to-top";
 export const metadata: Metadata = {
   title: "Aalekh - Carnival of Books",
   description:
-    "AALKEH is Bennett University’s annual literary fest that aims to showcase ‘the Power of Ink’. The two-day bilingual fest’s essence and spirit is to promote reading, writing, and learning with publishing support.",
+    "AALEKH is Bennett University’s annual literary fest that aims to showcase ‘the Power of Ink’. The two-day bilingual fest’s essence and spirit is to promote reading, writing, and learning with publishing support.",
 };
 
 export default function RootLayout({

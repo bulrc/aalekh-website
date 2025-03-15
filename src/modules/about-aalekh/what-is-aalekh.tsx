@@ -36,21 +36,21 @@ export const WhatIsAalekh: React.FC<WhatIsAalekhProps> = ({}) => {
       </div>
       <div className={`leading-6 font-semibold para`}>
         <p className={`mb-4`}>
-          Inspired by the Sanskrit word for ‘writing,’ <strong>AALKEH</strong> is
+          Inspired by the Sanskrit word for ‘writing,’ <strong>AALEKH</strong> is
           Bennett University’s annual literary festival, dedicated to
           highlighting the transformative power of words. This dynamic two-day
           bilingual event fosters a love for reading, writing, and intellectual
           discourse, with strong backing from the publishing industry.
         </p>
         <p className={`mb-4`}>
-          At the onset of spring, <strong>AALKEH</strong> is a celebration of
+          At the onset of spring, <strong>AALEKH</strong> is a celebration of
           literature, its timeless values, and the lasting impression it leaves
           on readers.
         </p>
         <p className={`mb-4`}>
           A collaborative effort between Bennett University’s Learning Resource
           Centre and <strong>CEREBRUM</strong>, the official Literary and
-          Debating Society, <strong>AALKEH</strong> unites book enthusiasts,
+          Debating Society, <strong>AALEKH</strong> unites book enthusiasts,
           authors, and thinkers in a lively ‘Carnival of Books.’
         </p>
       </div>
