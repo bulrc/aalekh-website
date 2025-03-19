@@ -42,14 +42,14 @@ export const Itinerary: React.FC<ItineraryProps> = ({}) => {
           <div className={`w-full flex justify-center mb-4`}>
             <TabsList className={`bg-zinc-200 w-fit`}>
               <TabsTrigger value="day1">
-                {!isLargeScreen ? "Day 1" : `Day 1: Wednesday, 20`}
-                {isLargeScreen ? <sup>th</sup> : null}
-                {isLargeScreen ? "⠀March 2024" : null}
+                {!isLargeScreen ? "Day 1" : `Day 1: Friday, 21st`}
+                {isLargeScreen ? <sup>st</sup> : null}
+                {isLargeScreen ? "⠀March 2025" : null}
               </TabsTrigger>
               <TabsTrigger value="day2">
-                {!isLargeScreen ? "Day 2" : `Day 2: Thursday, 21`}
-                {isLargeScreen ? <sup>st</sup> : null}
-                {isLargeScreen ? "⠀March 2024" : null}
+                {!isLargeScreen ? "Day 2" : `Day 2: Saturday, 22nd`}
+                {isLargeScreen ? <sup>nd</sup> : null}
+                {isLargeScreen ? "⠀March 2025" : null}
               </TabsTrigger>
             </TabsList>
           </div>
@@ -58,15 +58,10 @@ export const Itinerary: React.FC<ItineraryProps> = ({}) => {
             <Table className={cn(INTER.className, `text-sm font-medium`)}>
               <TableHeader>
                 <TableRow>
-                  <TableHead
-                    className={`text-center font-extrabold w-auto md:w-[200px]`}
-                  >
+                  <TableHead className={`text-center font-extrabold w-auto md:w-[200px]`}>
                     Time
                   </TableHead>
-                  <TableHead
-                    className={`text-center font-extrabold`}
-                    colSpan={2}
-                  >
+                  <TableHead className={`text-center font-extrabold`} colSpan={2}>
                     Program
                   </TableHead>
                 </TableRow>
@@ -74,298 +69,130 @@ export const Itinerary: React.FC<ItineraryProps> = ({}) => {
               <TableBody>
                 <TableRow>
                   <TableCell>10:30 AM – 10:35 AM</TableCell>
-                  <TableCell className={`w-auto md:w-[220px]`}>
-                    Program Introduction
-                  </TableCell>
-                  <TableCell>Alumni & Cerebrum Club</TableCell>
+                  <TableCell>Program Introduction</TableCell>
+                  <TableCell>Cerebrum Club</TableCell>
                 </TableRow>
-
                 <TableRow>
                   <TableCell>10:35 AM – 10:40 AM</TableCell>
                   <TableCell>Lamp Lighting</TableCell>
-                  <TableCell>
-                    Officiating Vice Chancellor, Dr. (Prof.) Ajith Abraham Guest
-                    of Honour, Smt. Mrudula Garg Chief Guest, Dr. Shiv Khera VP
-                    Admissions & Marketing, Ms. Hitankshi Thukral Professor &
-                    Librarian, Dr. Sanjay Kataria
-                  </TableCell>
+                  <TableCell>Hon'ble Pro Chancellor, COO, Guest of Honour, Chief Guest, Director Library, VP Admission/Marketing, Secretary - Cerebrum</TableCell>
                 </TableRow>
-
                 <TableRow>
                   <TableCell>10:40 AM – 10:45 AM</TableCell>
                   <TableCell>Welcome Address</TableCell>
-                  <TableCell>
-                    Dr. (Prof.) Ajith Abraham, officiating Vice Chancellor
-                  </TableCell>
+                  <TableCell>Pro Chancellor/COO</TableCell>
                 </TableRow>
-
                 <TableRow>
                   <TableCell>10:45 AM – 10:50 AM</TableCell>
-                  <TableCell>About Aalekh 2k24: Carnival of Books</TableCell>
-                  <TableCell>
-                    Dr. Sanjay Kataria, Professor & Librarian, Bennett
-                    University
-                  </TableCell>
+                  <TableCell>The Journey of Aalekh</TableCell>
+                  <TableCell>Dr. Sanjay Kataria, Director Learning Resource Centre, Bennett University</TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>10:50 AM – 11:30 AM</TableCell>
-                  <TableCell>
-                    Discussion with the Sahitya Akademi Award Winner
-                  </TableCell>
-                  <TableCell>
-                    Smt. Mrudula Garg in conversation Ms. Manisha Choudhary,
-                    Guest Moderator
-                  </TableCell>
+                  <TableCell>10:50 AM – 11:10 AM</TableCell>
+                  <TableCell>Inaugural Address by Guest of Honour</TableCell>
+                  <TableCell>Shri.Ashok Kumar, IPS (retd) Former DGP Uttarakhand presently Vice Chancellor at sports university of Haryana RAI</TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>11:30 AM – 11:35 AM</TableCell>
+                  <TableCell>11:10 AM – 11:15 AM</TableCell>
                   <TableCell>Felicitation of Guest of Honour</TableCell>
-                  <TableCell>
-                    Officiating Vice Chancellor, Dr. (Prof.) Ajith Abraham
-                  </TableCell>
+                  <TableCell>Pro Chancellor/COO</TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>11:35 AM – 12:30 PM</TableCell>
-                  <TableCell>Inaugural Address by Chief Guest</TableCell>
-                  <TableCell>Dr. Shiv Khera</TableCell>
-                </TableRow>
-
-                <TableRow>
-                  <TableCell>12:30 PM - 12:40 PM</TableCell>
+                  <TableCell>11:15 AM – 11:30 AM</TableCell>
                   <TableCell>Guest and Author Felicitation</TableCell>
-                  <TableCell>
-                    Dr. (Prof.) Ajith Abraham, officiating Vice Chancellor
-                  </TableCell>
+                  <TableCell>Pro Chancellor/COO</TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>12:40 PM -12:45 PM</TableCell>
+                  <TableCell>11:30 AM - 11:35 AM</TableCell>
+                  <TableCell>BU Author Felicitation</TableCell>
+                  <TableCell>BU Author Felicitation</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>11:35 AM -11:45 AM</TableCell>
                   <TableCell>Vote of Thanks</TableCell>
-                  <TableCell>
-                    Prof. Nidhi Sinha, Associate Professor, School of Management
-                  </TableCell>
+                  <TableCell>Prof. Nidhi Sinha, Associate Professor, School of Management</TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>12:45 PM – 1:00 PM</TableCell>
-                  <TableCell colSpan={2}>
-                    Inauguration of Book Exhibition and Hi-Tea
-                  </TableCell>
+                  <TableCell>11:45 AM -12:00 PM</TableCell>
+                  <TableCell>High Tea</TableCell>
+                  <TableCell></TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>12:00 PM - 1:00 PM</TableCell>
+                  <TableCell>Session-I: Finding success in the middle of everything</TableCell>
+                  <TableCell>Mr. Vivek Atrae, IAS(retd) Columnist, Author and Motivational Speaker in conversation with Prof. Sanjeev Kumar, Dean School of Liberal Arts</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>1:00 PM - 2:00 PM</TableCell>
+                  <TableCell>Session-II: A talk on 'Major Maritime talks' in history</TableCell>
+                  <TableCell>Capt. Beetashok Chatterjee in conversation with Capt. Pawan Kaul</TableCell>
                 </TableRow>
                 <TableRow className={`bg-orange-100`}>
-                  <TableCell>1:00 PM – 1:45 PM</TableCell>
-                  <TableCell colSpan={2}>Lunch</TableCell>
+                  <TableCell>2:00 PM - 3:00 PM</TableCell>
+                  <TableCell  colSpan={2} >Lunch</TableCell>
+                  <TableCell></TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>
-                    1:45 PM – 2:30 PM <br /> Session-I
-                  </TableCell>
-                  <TableCell>Motivational Talk</TableCell>
-                  <TableCell>
-                    <strong>How to Manage Stress & Anxiety</strong> <br />
-                    Ms. Radhika Kawlra Singh, Guest Author <br />
-                    Ms. Mimansa Singh Tanwar, Guest Author
-                  </TableCell>
+                  <TableCell>3:00 PM - 4:00 PM</TableCell>
+                  <TableCell>Session-III: Exploring the essence of her book, Madam Sir.</TableCell>
+                  <TableCell>Manjari Jaruhar in conversation with Dr. Nidhi Sinha</TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>
-                    2:30 PM – 3:15 PM <br /> Session-II
-                  </TableCell>
-                  <TableCell>
-                    Author Discussion <br />
-                    <strong>
-                      The Art of Writing Fiction: AI and other Influences
-                    </strong>
-                  </TableCell>
-                  <TableCell>
-                    Ms. Kanchana Banerjee, Guest Author <br />
-                    Dr. Harshali Singh, Guest Author <br />
-                    in conversation with <br />
-                    Mr. Dipankar Mukherjee, Guest Moderator
-                  </TableCell>
-                </TableRow>
-
-                <TableRow>
-                  <TableCell>
-                    3:15 PM - 4:00 PM <br /> Session-III
-                  </TableCell>
-                  <TableCell>
-                    Fireside Chat <br />
-                    <strong>When Ardhsatya met Himmatwala</strong>
-                  </TableCell>
-                  <TableCell>
-                    Mr. Avijit Ghosh, Guest Author <br />
-                    in conversation with <br />
-                    Dr. Sanjeev Ratna Singh, Dean, Times School of Media
-                  </TableCell>
-                </TableRow>
-
-                <TableRow>
-                  <TableCell>
-                    4:00 PM – 5:00 PM <br /> Session-IV
-                  </TableCell>
-                  <TableCell>
-                    Author Discussion <br />
-                    <strong>Exploring Corporate Narratives</strong>
-                  </TableCell>
-                  <TableCell>
-                    Mr. Jitender Girdhar, Guest Author
-                    <br />
-                    Mr. Ujwal Kalra, Guest Author
-                    <br />
-                    Mr. Sidharth Balakrishna, Guest Author
-                    <br />
-                    in conversation with <br />
-                    Dr. Nilanjan Chattopadhyay, Dean, School of Management
-                  </TableCell>
-                </TableRow>
-
-                <TableRow>
-                  <TableCell>6:00 PM onwards</TableCell>
-                  <TableCell>Student Activity</TableCell>
-                  <TableCell>
-                    <strong>Intra-University Competitions</strong>
-                  </TableCell>
+                  <TableCell>4:00 PM – 5:00 PM</TableCell>
+                  <TableCell>Session-IV: Unveiling the Legacy of Batla House</TableCell>
+                  <TableCell>IPS Karnal Singh in conversation with Prof. Ayanjit Sen</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
           </TabsContent>
+
           <TabsContent value="day2">
             <Table className={cn(INTER.className, `text-sm font-medium`)}>
               <TableHeader>
                 <TableRow>
-                  <TableHead
-                    className={`text-center font-extrabold w-auto md:w-[200px]`}
-                  >
+                  <TableHead className={`text-center font-extrabold w-auto md:w-[200px]`}>
                     Time
                   </TableHead>
-                  <TableHead
-                    className={`text-center font-extrabold`}
-                    colSpan={2}
-                  >
+                  <TableHead className={`text-center font-extrabold`} colSpan={2}>
                     Program
                   </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 <TableRow>
-                  <TableCell>10:30 AM – 10:40 AM</TableCell>
-                  <TableCell className={`w-auto md:w-[220px]`}>
-                    Opening Remarks
-                  </TableCell>
-                  <TableCell>
-                    Dr. Sanjay Kataria, Professor & Librarian
-                  </TableCell>
+                  <TableCell>10:30 AM - 12:00 PM</TableCell>
+                  <TableCell>Session-V: Between history's facts and fiction's enchanting haze</TableCell>
+                  <TableCell>Dr. Harshali Singh, Ms. Parvati Sharma, & Ms. Sutapa Basu in conversation with Dr. Dhruvee Sinha</TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>10:40 AM – 10:45 AM</TableCell>
-                  <TableCell>Felicitation of Guests</TableCell>
-                  <TableCell>
-                    Officiating Vice Chancellor, Dr. (Prof.) Ajith Abraham
-                  </TableCell>
+                  <TableCell>12:00 PM – 12:30 PM</TableCell>
+                  <TableCell>Session-VI: Bridging Art, Literature, and the Indian Landscape: Kashmir to Kanyakumari</TableCell>
+                  <TableCell>Dr. Rajesh Kumar</TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>10:40 AM – 10:45 AM</TableCell>
-                  <TableCell>Welcome Address</TableCell>
-                  <TableCell>
-                    Dr. (Prof.) Ajith Abraham, officiating Vice Chancellor
-                  </TableCell>
+                  <TableCell>12:30 PM - 1:00 PM</TableCell>
+                  <TableCell>Session-VII: From Inner Stress to Self-Love: A Journey Within</TableCell>
+                  <TableCell>Dr. Ritu</TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>
-                    11:00 AM – 11:45 AM <br /> Session-V
-                  </TableCell>
-                  <TableCell>
-                    <strong>Author Discussion</strong>
-                    <br />
-                    The 7 Layers of Delhi
-                  </TableCell>
-                  <TableCell>
-                    Ms. Parvati Sharma, Guest Author
-                    <br />
-                    in conversation with <br />
-                    Shantanu Vyas, Student
-                  </TableCell>
+                  <TableCell>1:00 PM - 1:30 PM</TableCell>
+                  <TableCell>Session-VIII: Guest Speaker</TableCell>
+                  <TableCell>Dr. Anshuman Kamthan</TableCell>
                 </TableRow>
-
-                <TableRow>
-                  <TableCell>
-                    11:45 AM – 12:30 PM
-                    <br /> Session-VI
-                  </TableCell>
-                  <TableCell>
-                    <strong>Motivational Talk</strong>
-                    <br />
-                    How to be an Influencer
-                  </TableCell>
-                  <TableCell>
-                    Mr. Suvir Saran, Influencer
-                    <br />
-                    Mr. Gaurav Wasan
-                    <br />
-                    in conversation with <br />
-                    Kushagra Joshi, Alumni
-                  </TableCell>
-                </TableRow>
-
                 <TableRow className={`bg-orange-100`}>
-                  <TableCell>12:30 PM – 1:15 PM</TableCell>
-                  <TableCell colSpan={2}>Lunch</TableCell>
+                  <TableCell>1:30 PM - 2:00 PM</TableCell>
+                  <TableCell  colSpan={2} >Lunch</TableCell>
+                  <TableCell></TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>
-                    1:15 PM - 2:00 PM <br /> Session-VII
-                  </TableCell>
-                  <TableCell>
-                    <strong>Author Discussion</strong>
-                    <br />
-                    Journalism and Authorship – Navigating between Fact and
-                    Fiction
-                  </TableCell>
-                  <TableCell>
-                    Ms. Prachi Gupta, Guest Author
-                    <br />
-                    in conversation with <br />
-                    Pranavi Ambati, Student
-                  </TableCell>
+                  <TableCell>2:00 PM – 6:00 PM</TableCell>
+                  <TableCell>Student Activity: Intra-University Competitions by CEREBRUM</TableCell>
+                  <TableCell>'The Unheard' Debate Competition, 'Popcorn and Playoffs' Quiz Competition, 'Psych Quest' Quiz Competition, 'Wah Wah kya baat hai?' Poetry Competition</TableCell>
                 </TableRow>
-
                 <TableRow>
-                  <TableCell>
-                    2:00 PM - 2:45 PM <br /> Session-VIII
-                  </TableCell>
-                  <TableCell>
-                    <strong>Keynote Address</strong>
-                    <br />
-                    Corporate Voices in the Literary World
-                  </TableCell>
-                  <TableCell>Mr. Rajnish Tomar, Guest Author</TableCell>
-                </TableRow>
-
-                <TableRow>
-                  <TableCell>2:45 PM – 5:30 PM</TableCell>
-                  <TableCell>Student Activity</TableCell>
-                  <TableCell>
-                    <strong>Intra-University Competitions by CEREBRUM</strong>{" "}
-                    <br />
-                    <em>‘The Unheard’ Debate Competition</em> <br />
-                    <em>‘Dead Poets Society’ Poetry Competition</em> <br />
-                    <em>‘Magic & Literary Odyssey’ Quiz Competition </em>
-                  </TableCell>
-                </TableRow>
-
-                <TableRow>
-                  <TableCell>5:30 PM – 6:00 PM</TableCell>
-                  <TableCell colSpan={2}>Valedictory Session</TableCell>
+                  <TableCell>6:00 PM – 6:30 PM</TableCell>
+                  <TableCell>Valedictory Session</TableCell>
+                  <TableCell></TableCell>
                 </TableRow>
               </TableBody>
             </Table>

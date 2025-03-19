@@ -7,6 +7,71 @@ export const BREAKPOINTS = {
   xl: 1280,
   "2xl": 1536,
 };
+export const CHIEF_AUTHOR_DATA_2k25: ChiefAuthorData[] = [
+  {
+    name: "ASHOK KUMAR",
+    title: "Guest of Honour",
+    image: "/authors/ashok-kumar.png",
+    designation: "IPS OFFICER"
+  }
+];
+
+export const AUTHOR_DATA_2k25: AuthorData[] = [
+  {
+    name: "VIVEK ATRAY",
+    title: "Guest of Honour",
+    image: "/authors/vivek-atray.png",
+    designation: "EMINENT AUTHOR"
+  },
+  {
+    name: "KARNAL SINGH",
+    title: "Special Guest",
+    image: "/authors/karnal-singh.png",
+    designation: "ASSOCIATE EDITOR"
+  },
+  {
+    name: "REETASHOK CHATTERJEE",
+    title: "Special Guest",
+    image: "/authors/reetashok-chatterjee.png",
+    designation: "CONSUMER INFORMATION SOURCE"
+  },
+  {
+    name: "MANJARI JARUHAR",
+    title: "Special Guest",
+    image: "/authors/manjari-jaruhar.png",
+    designation: "CHIEF & AUTHOR"
+  },
+  {
+    name: "HARSHALI SINGH",
+    image: "/authors/harshali-singh.png",
+    designation: "AUTHOR, CREATOR & SPEAKER"
+  },
+  {
+    name: "SUTAPA BASU",
+    image: "/authors/sutapa-basu.png",
+    designation: "AUTHOR & PUBLIC SPEAKER"
+  },
+  {
+    name: "PARVATI SHARMA",
+    image: "/authors/parvati-sharma.png",
+    designation: "INTERVIEWER & AUTHOR"
+  },
+  {
+    name: "ANSHUMAN KAMTHAN",
+    image: "/authors/anshuman-kamthan.png",
+    designation: "ENGINEER & AUTHOR"
+  },
+  {
+    name: "DR. RAJESH KUMAR VYAS",
+    image: "/authors/rajesh-kumar-vyas.png",
+    designation: "FOOD BLOGGER"
+  },
+  {
+    name: "DR. RITU SOBYAN",
+    image: "/authors/ritu-sobyan.png",
+    designation: "JOURNALIST"
+  }
+];
 
 export const CHIEF_AUTHOR_DATA_2k24: ChiefAuthorData[] = [
   {

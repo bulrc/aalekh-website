@@ -56,7 +56,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   forceWhite = false,
   ...props
 }) => {
-  const router = useRouter(); // Add useRouter
+  const router = useRouter();
   const isLaptop = useMediaQuery({ query: minWidth(1280) });
   const isSmallScreen = useMediaQuery({ query: minWidth(480) });
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -64,6 +64,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   const [logoHeight] = useState(55);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const [expandedMobileDropdowns, setExpandedMobileDropdowns] = useState<{[key: string]: boolean}>({});
 
   useEffect(() => {
     setMounted(true);
@@ -113,8 +114,55 @@ export const Navigation: React.FC<NavigationProps> = ({
     </Link>
   );
 
-  const renderNavLink = (item: any, linkClassName?: string) => {
+  const renderNavLink = (item: any, linkClassName?: string, isMobile = false) => {
     if (item.type === "dropdown") {
+      // For mobile view, use a different approach
+      if (isMobile) {
+        const isExpanded = expandedMobileDropdowns[item.label] || false;
+        
+        return (
+          <div key={item.label} className="flex flex-col items-center">
+            <button
+              className={cn(
+                "duration-200 flex items-center gap-1 text-black hover:text-red-500",
+                linkClassName
+              )}
+              onClick={() => setExpandedMobileDropdowns({
+                ...expandedMobileDropdowns,
+                [item.label]: !isExpanded
+              })}
+            >
+              {item.label}
+              <ChevronDownIcon 
+                className={cn(
+                  "h-4 w-4 transition-transform duration-200",
+                  isExpanded ? "transform rotate-180" : ""
+                )} 
+              />
+            </button>
+            
+            {isExpanded && (
+              <div className="flex flex-col items-center mt-4 gap-4">
+                {item.items.map((dropdownItem: any) => (
+                  <Link
+                    key={dropdownItem.href}
+                    href={dropdownItem.href}
+                    className={cn("duration-200 hover:text-red-500 text-black", linkClassName)}
+                    onClick={() => {
+                      setIsSidebarOpen(false);
+                      setExpandedMobileDropdowns({});
+                    }}
+                  >
+                    {dropdownItem.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      }
+      
+      // For desktop view, use DropdownMenu
       return (
         <DropdownMenu key={item.label}>
           <DropdownMenuTrigger
@@ -133,7 +181,7 @@ export const Navigation: React.FC<NavigationProps> = ({
                 className="px-4 py-2 hover:bg-gray-100 transition-colors"
                 onSelect={() => {
                   setIsSidebarOpen(false);
-                  router.push(dropdownItem.href); // Use router.push instead of Link
+                  router.push(dropdownItem.href);
                 }}
               >
                 {dropdownItem.label}
@@ -156,8 +204,8 @@ export const Navigation: React.FC<NavigationProps> = ({
     );
   };
 
-  const navLinks = (linkClassName?: string) => {
-    return navigationLinksData.map((item) => renderNavLink(item, linkClassName));
+  const navLinks = (linkClassName?: string, isMobile = false) => {
+    return navigationLinksData.map((item) => renderNavLink(item, linkClassName, isMobile));
   };
 
   return mounted ? (
@@ -214,7 +262,7 @@ export const Navigation: React.FC<NavigationProps> = ({
                   "my-16 flex flex-col gap-10 text-center"
                 )}
               >
-                {navLinks("text-lg sm:text-2xl")}
+                {navLinks("text-lg sm:text-2xl", true)} {/* Pass true for isMobile */}
               </div>
             </SheetContent>
           </Sheet>
