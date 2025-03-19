@@ -35,7 +35,7 @@ export const ChiefAuthorCard: React.FC<ChiefAuthorCard> = ({ chiefAuthor }) => {
         <h4
           className={cn(
             BERKSHIRE_SWASH.className,
-            `text-3xl font-black text-primary text-center mb-[-40px]`
+            `text-3xl font-black text-primary text-center mb-[-20px]`
           )}
         >
           {chiefAuthor.title}
