@@ -30,18 +30,19 @@ export const CollaboratorItem: React.FC<CollaboratorItemProps> = ({ data }) => {
   const { name, logo, width, height } = data;
 
   return (
-    <div className="text-center flex flex-col items-center">
-      <div className="relative mb-6 transform transition-transform duration-300 hover:scale-105">
+    <div className="text-center flex flex-col items-center w-auto">
+      <div className="relative mb-6 transform transition-transform duration-300 hover:scale-105 w-full">
         <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-primary/60 rounded-lg blur-sm"></div>
-        <div className="relative bg-white p-6 rounded-lg flex items-center justify-center">
-          <Image
-            alt={`${name} logo`}
-            src={logo}
-            width={width}
-            height={height}
-            quality={100}
-            className="mx-auto"
-          />
+        <div className="relative bg-primary/95 p-6 rounded-lg flex items-center justify-center">
+          <div className="flex justify-center items-center w-auto">
+            <Image
+              alt={`${name} logo`}
+              src={logo}
+              width={width}
+              height={height}
+              quality={100}
+            />
+          </div>
         </div>
       </div>
       <h5 className="font-bold text-2xl mt-2">{name}</h5>
