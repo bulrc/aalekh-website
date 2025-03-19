@@ -5,10 +5,9 @@ import { Authors2k25 } from "../common/authors2k25";
 
 
 import { ChancellorMessage } from "./chancellor-message";
-// import { Collaborators } from "./collaborators";
+import { Collaborators } from "./collaborators";
 import { HeroSection } from "./hero-section";
 import { Itinerary } from "./itinerary";
-// import { Itinerary } from "./itinerary";
 
 interface Page2k25Props {}
 
@@ -30,7 +29,7 @@ export const Page2k25: React.FC<Page2k25Props> = ({}) => {
        */}
       <Itinerary />
       <Parallax image="/parallax-4.webp" />
-      {/* <Collaborators /> */}
+      <Collaborators />
     </>
   );
 };
