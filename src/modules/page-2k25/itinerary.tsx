@@ -75,7 +75,7 @@ export const Itinerary: React.FC<ItineraryProps> = ({}) => {
                 <TableRow>
                   <TableCell>10:35 AM – 10:40 AM</TableCell>
                   <TableCell>Lamp Lighting</TableCell>
-                  <TableCell>Hon'ble Pro Chancellor, COO, Guest of Honour, Chief Guest, Director Library, VP Admission/Marketing, Secretary - Cerebrum</TableCell>
+                  <TableCell>Hon&apos;ble Pro Chancellor, COO, Guest of Honour, Chief Guest, Director Library, VP Admission/Marketing, Secretary - Cerebrum</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>10:40 AM – 10:45 AM</TableCell>
@@ -124,7 +124,7 @@ export const Itinerary: React.FC<ItineraryProps> = ({}) => {
                 </TableRow>
                 <TableRow>
                   <TableCell>1:00 PM - 2:00 PM</TableCell>
-                  <TableCell>Session-II: A talk on 'Major Maritime talks' in history</TableCell>
+                  <TableCell>Session-II: A talk on &apos;Major Maritime talks&apos; in history</TableCell>
                   <TableCell>Capt. Beetashok Chatterjee in conversation with Capt. Pawan Kaul</TableCell>
                 </TableRow>
                 <TableRow className={`bg-orange-100`}>
@@ -161,7 +161,7 @@ export const Itinerary: React.FC<ItineraryProps> = ({}) => {
               <TableBody>
                 <TableRow>
                   <TableCell>10:30 AM - 12:00 PM</TableCell>
-                  <TableCell>Session-V: Between history's facts and fiction's enchanting haze</TableCell>
+                  <TableCell>Session-V: Between history&apos;s facts and fiction&apos;s enchanting haze</TableCell>
                   <TableCell>Dr. Harshali Singh, Ms. Parvati Sharma, & Ms. Sutapa Basu in conversation with Dr. Dhruvee Sinha</TableCell>
                 </TableRow>
                 <TableRow>
@@ -187,7 +187,7 @@ export const Itinerary: React.FC<ItineraryProps> = ({}) => {
                 <TableRow>
                   <TableCell>2:00 PM – 6:00 PM</TableCell>
                   <TableCell>Student Activity: Intra-University Competitions by CEREBRUM</TableCell>
-                  <TableCell>'The Unheard' Debate Competition, 'Popcorn and Playoffs' Quiz Competition, 'Psych Quest' Quiz Competition, 'Wah Wah kya baat hai?' Poetry Competition</TableCell>
+                  <TableCell>&apos;The Unheard&apos; Debate Competition, &apos;Popcorn and Playoffs&apos; Quiz Competition, &apos;Psych Quest&apos; Quiz Competition, &apos;Wah Wah kya baat hai?&apos; Poetry Competition</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>6:00 PM – 6:30 PM</TableCell>
