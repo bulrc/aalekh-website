@@ -24,35 +24,26 @@ interface AuthorsProps {
   children?: React.ReactNode;
 }
 
-interface ChiefAuthorCard {
-  chiefAuthor: ChiefAuthorData;
-}
-
-export const ChiefAuthorCard: React.FC<ChiefAuthorCard> = ({ chiefAuthor }) => {
+// Single card for any author (chief or special)
+const AuthorCard: React.FC<{ name: string; image: string; designation?: string }> = ({
+  name,
+  image,
+  designation,
+}) => {
   return (
-    <div className={`flex gap-4 flex-col lg:flex-row`}>
-      <div className={`flex-1 flex flex-col items-center`}>
-        <h4
-          className={cn(
-            BERKSHIRE_SWASH.className,
-            `text-3xl font-black text-primary text-center mb-[-20px]`
-          )}
-        >
-          {chiefAuthor.title}
-        </h4>
-        <Image
-          alt={`Photo of ${chiefAuthor.name}`}
-          src={chiefAuthor.image}
-          width={200} // Set a fixed width
-          height={250} // Set a fixed height
-          className="rounded-lg object-cover w-[200px] h-[250px]"
-        />
-        <div className={`text-center mt-4`}>
-          <h4 className={`text-2xl font-black`}>{chiefAuthor.name}</h4>
-          {chiefAuthor.designation && (
-            <p className="text-sm text-gray-600 mt-1">{chiefAuthor.designation}</p>
-          )}
-        </div>
+    <div className="flex flex-col items-center">
+      <Image
+        alt={`Photo of ${name}`}
+        src={image}
+        width={200}
+        height={250}
+        className="rounded-lg object-cover w-[200px] h-[250px]"
+      />
+      <div className="text-center mt-3">
+        <h4 className="text-xl font-black">{name}</h4>
+        {designation && (
+          <p className="text-sm text-gray-600 mt-1">{designation}</p>
+        )}
       </div>
     </div>
   );
@@ -74,23 +65,23 @@ export const Authors2k25: React.FC<AuthorsProps> = ({
   return (
     <div
       style={{ backgroundImage: "url(./testimonial-bg.webp)" }}
-      className={`bg-cover overflow-hidden py-16 h-fit bg-purple-100`}
+      className="bg-cover overflow-hidden py-16 bg-purple-100"
       id="authors"
     >
       <Wrapper>
-        <div className={`text-center mb-8`}>
-          
+        {/* Top Section */}
+        <div className="text-center mb-8">
           <div className="flex flex-col items-center mb-6">
             <Image
               alt="Aalekh Logo"
-              src={`/aalekh-logo.png`}
+              src="/aalekh-logo.png"
               width={289}
               height={100}
             />
             <span
               className={cn(
                 BERKSHIRE_SWASH.className,
-                `text-4xl sm:text-5xl font-bold text-primary mt-2`
+                "text-4xl sm:text-5xl font-bold text-primary mt-2"
               )}
             >
               Carnival of books
@@ -103,106 +94,101 @@ export const Authors2k25: React.FC<AuthorsProps> = ({
               <span className="text-xl font-bold">21-22 MARCH</span>
             </div>
           </div>
-          
           <h3
             className={cn(
               BERKSHIRE_SWASH.className,
-              `text-3xl font-black text-primary text-center mb-10`
+              "text-3xl font-black text-primary text-center mb-10"
             )}
           >
             Welcomes The Dignitaries
           </h3>
         </div>
 
-        {/* Chief Authors Section - Using the original layout */}
-        <div className={`my-8 flex justify-center flex-col gap-16 md:flex-row md:gap-36`}>
-          {chiefAuthors.slice(0, 2).map((person, i) => {
-            return <ChiefAuthorCard chiefAuthor={person} key={i} />;
-          })}
-        </div>
-
-        {/* Special Guests Section */}
-        <div className="flex justify-center flex-wrap gap-8">
-          {chiefAuthors.slice(2).map((person, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <Image
-  alt={`Photo of ${person.name}`}
-  src={person.image}
-  width={200} // Set a fixed width
-  height={250} // Set a fixed height
-  className="rounded-lg object-cover w-[200px] h-[250px]"
-/>
-
-              <h4 className="text-lg font-bold text-center">{person.name}</h4>
-              <p className="text-sm text-gray-600 text-center">{person.designation}</p>
-            </div>
+        {/* Chief Authors Section */}
+        {/* Use a uniform layout: flex-wrap with consistent spacing */}
+        <div className="flex flex-wrap items-center justify-center gap-12 my-8">
+          {chiefAuthors.slice(0, 2).map((person, i) => (
+            <AuthorCard
+              key={i}
+              name={person.name}
+              image={person.image}
+              designation={person.designation}
+            />
           ))}
         </div>
 
-        {/* Guest Authors Section - Using the original carousel */}
+        {/* Special Guests Section (remaining chief authors) */}
+        <div className="flex flex-wrap items-center justify-center gap-12">
+          {chiefAuthors.slice(2).map((person, i) => (
+            <AuthorCard
+              key={i}
+              name={person.name}
+              image={person.image}
+              designation={person.designation}
+            />
+          ))}
+        </div>
+
+        {/* Guest Authors Section */}
         <h4
           className={cn(
             BERKSHIRE_SWASH.className,
-            `text-3xl font-black text-primary text-center pt-12 mb-[-40px]`
+            "text-3xl font-black text-primary text-center pt-12"
           )}
         >
           Guest Authors
         </h4>
 
         <Carousel
-          className={`w-full lg:w-2/3 m-auto`}
+          className="w-full lg:w-2/3 mx-auto mt-4"
           opts={{
             loop: true,
           }}
         >
-          <CarouselContent className={`pb-10 sm:pb-12 lg:pb-0`}>
-            {authors.map((person, i) => {
-              return (
-                <CarouselItem key={i} className={`basis-3/3 md:basis-1/3`}>
-                  <div className={`flex gap-4 flex-col lg:flex-row`}>
-                    <div className={`flex-1 flex flex-col items-center`}>
-                      <Image
-                        alt={`Photo of ${person.name}`}
-                        src={person.image}
-                        width={220}
-                        height={220}
-                        className={`rounded-2xl`}
-                      />
-                      <div className={`text-center mt-4`}>
-                        <h4 className={`text-xl font-black`}>{person.name}</h4>
-                        {person.designation && (
-                          <p className="text-sm text-gray-600 mt-1">{person.designation}</p>
-                        )}
-                      </div>
-                    </div>
+          <CarouselContent className="pb-10 sm:pb-12 lg:pb-0">
+            {authors.map((person, i) => (
+              <CarouselItem key={i} className="basis-3/3 md:basis-1/3">
+                <div className="flex flex-col items-center">
+                  <Image
+                    alt={`Photo of ${person.name}`}
+                    src={person.image}
+                    width={220}
+                    height={220}
+                    className="rounded-2xl object-cover w-[220px] h-[220px]"
+                  />
+                  <div className="text-center mt-4">
+                    <h4 className="text-xl font-black">{person.name}</h4>
+                    {person.designation && (
+                      <p className="text-sm text-gray-600 mt-1">
+                        {person.designation}
+                      </p>
+                    )}
                   </div>
-                </CarouselItem>
-              );
-            })}
+                </div>
+              </CarouselItem>
+            ))}
           </CarouselContent>
+
+          {/* Carousel Controls */}
           <CarouselPrevious
-            variant={"default"}
+            variant="default"
             className={cn(
               carouselButtonClasses,
               !changeButton
-                ? `top-[100%] left-[48%] translate-x-[-100%]`
+                ? "top-[100%] left-[48%] translate-x-[-100%]"
                 : "ml-[-40px]"
             )}
           />
           <CarouselNext
-            variant={"default"}
+            variant="default"
             className={cn(
               carouselButtonClasses,
               !changeButton
-                ? `top-[100%] right-[48%] translate-x-[100%]`
+                ? "top-[100%] right-[48%] translate-x-[100%]"
                 : "mr-[-40px]"
             )}
           />
         </Carousel>
-
-        {/* <div className="text-center mt-12 py-4 bg-yellow-600 text-white text-xl">
-          PREPARING INDIA TO MOVE WITH THE TIMES
-        </div> */}
       </Wrapper>
     </div>
   );

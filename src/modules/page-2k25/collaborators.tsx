@@ -57,12 +57,12 @@ export const CollaboratorItem: React.FC<CollaboratorItemProps> = ({ data }) => {
     : "";
 
   return (
-    <div className="text-center flex flex-col items-center w-full max-w-sm mx-auto mb-10 md:mb-0">
+    <div className="text-center flex flex-col items-center w-full max-w-sm mx-auto mb-10">
       <a href={website} target="_blank" rel="noopener noreferrer" className="block w-full">
         <div className={`relative mb-6 transform transition-transform duration-300 hover:scale-105 w-full ${highlightClasses} rounded-lg`}>
           <div className={`absolute -inset-1 bg-gradient-to-r ${gradientClasses} rounded-lg blur-sm`}></div>
           <div className={`relative ${bgClasses} p-6 rounded-lg flex items-center justify-center h-36`}>
-            <div className="flex justify-center items-center w-auto">
+            <div className="flex justify-center items-center">
               <Image
                 alt={`${name} logo`}
                 src={logo}
@@ -85,12 +85,18 @@ export const CollaboratorItem: React.FC<CollaboratorItemProps> = ({ data }) => {
 
 export const Collaborators: React.FC<CollaboratorsProps> = ({}) => {
   return (
-    <Wrapper className="py-16 md:py-24" id="collaborators">
-      <div className="text-center mb-16">
-        <span className={cn(BERKSHIRE_SWASH.className, "heading text-4xl md:text-5xl")}>
-          Trusted <span className="text-primary">Partners</span>
-        </span>
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+    <Wrapper className="py-16 md:py-16" id="collaborators">
+      <div className="text-center mb-16 max-w-2xl mx-auto">
+        {/* Updated heading with mobile line break */}
+        <h2 className={cn(
+          BERKSHIRE_SWASH.className,
+          "text-5xl md:text-8xl font-bold leading-tight px-4"
+        )}>
+          Trusted{' '}
+          <br className="block md:hidden" /> 
+          <span className="text-primary">Partners</span>
+        </h2>
+        <p className="text-gray-600 mt-4 px-4 md:px-0">
           Collaborating with industry leaders to bring you the best experience
         </p>
       </div>
@@ -98,7 +104,8 @@ export const Collaborators: React.FC<CollaboratorsProps> = ({}) => {
       <div className="max-w-5xl mx-auto">
         <div className="bg-gradient-to-br from-primary via-yellow-500 to-primary/80 p-1 rounded-2xl shadow-xl">
           <div className="bg-white p-8 md:p-12 rounded-2xl">
-            <div className="flex flex-col md:flex-row md:space-x-8 items-center justify-center">
+            {/* Using grid layout ensures proper stacking on mobile */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {partnerData.map((data, i) => (
                 <CollaboratorItem data={data} key={i} />
               ))}
