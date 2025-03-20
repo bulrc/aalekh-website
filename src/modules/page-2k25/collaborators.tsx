@@ -13,6 +13,7 @@ interface Collaborator {
   height: number;
   description: string;
   type: "knowledge" | "gifting";
+  website: string;
 }
 
 const partnerData: Collaborator[] = [
@@ -22,7 +23,8 @@ const partnerData: Collaborator[] = [
     width: 200,
     height: 41,
     description: "Knowledge expertise that elevates our shared vision",
-    type: "knowledge"
+    type: "knowledge",
+    website: "https://www.refread.com/"
   },
   {
     name: "FNP",
@@ -30,7 +32,8 @@ const partnerData: Collaborator[] = [
     width: 180,
     height: 70,
     description: "Premium gifting solutions that delight and inspire",
-    type: "gifting"
+    type: "gifting",
+    website: "https://www.fnp.com"
   }
 ];
 
@@ -39,7 +42,7 @@ interface CollaboratorItemProps {
 }
 
 export const CollaboratorItem: React.FC<CollaboratorItemProps> = ({ data }) => {
-  const { name, logo, width, height, description, type } = data;
+  const { name, logo, width, height, description, type, website } = data;
   
   const gradientClasses = type === "knowledge" 
     ? "from-primary/30 to-primary/60" 
@@ -55,20 +58,22 @@ export const CollaboratorItem: React.FC<CollaboratorItemProps> = ({ data }) => {
 
   return (
     <div className="text-center flex flex-col items-center w-full max-w-sm mx-auto mb-10 md:mb-0">
-      <div className={`relative mb-6 transform transition-transform duration-300 hover:scale-105 w-full ${highlightClasses} rounded-lg`}>
-        <div className={`absolute -inset-1 bg-gradient-to-r ${gradientClasses} rounded-lg blur-sm`}></div>
-        <div className={`relative ${bgClasses} p-6 rounded-lg flex items-center justify-center h-36`}>
-          <div className="flex justify-center items-center w-auto">
-            <Image
-              alt={`${name} logo`}
-              src={logo}
-              width={width}
-              height={height}
-              quality={100}
-            />
+      <a href={website} target="_blank" rel="noopener noreferrer" className="block w-full">
+        <div className={`relative mb-6 transform transition-transform duration-300 hover:scale-105 w-full ${highlightClasses} rounded-lg`}>
+          <div className={`absolute -inset-1 bg-gradient-to-r ${gradientClasses} rounded-lg blur-sm`}></div>
+          <div className={`relative ${bgClasses} p-6 rounded-lg flex items-center justify-center h-36`}>
+            <div className="flex justify-center items-center w-auto">
+              <Image
+                alt={`${name} logo`}
+                src={logo}
+                width={width}
+                height={height}
+                quality={100}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </a>
       <h5 className="font-bold text-2xl mt-2">{name}</h5>
       <span className={`text-sm uppercase tracking-wider font-medium mt-1 ${type === "knowledge" ? "text-primary font-bold" : "text-gray-500"}`}>
         {type === "knowledge" ? "Knowledge Partner" : "Gifting Partner"}
