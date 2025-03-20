@@ -13,6 +13,12 @@ export const CHIEF_AUTHOR_DATA_2k25: ChiefAuthorData2k25[] = [
     title: "Guest of Honour",
     image: "/authors/ashok-kumar.png",
     designation: "IPS OFFICER"
+  },
+  {
+    "name": "RAMESH C GAUR",
+    "title": "Guest of Honour",
+    "image": "/authors/ramesh-gaur.png",
+    "designation": "Dean & Director (Library & Information), IGNCA"
   }
 ];
 
@@ -28,14 +34,19 @@ export const AUTHOR_DATA_2k25: AuthorData2k25[] = [
     designation: "ASSOCIATE EDITOR"
   },
   {
-    name: "REETASHOK CHATTERJEE",
+    name: "MANJARI JARUHAR",
+    image: "/authors/manjari-jaruhar.png",
+    designation: "CHIEF & AUTHOR"
+  },
+  {
+    name: "BEETASHOK CHATTERJEE",
     image: "/authors/reetashok-chatterjee.png",
     designation: "CONSUMER INFORMATION SOURCE"
   },
   {
-    name: "MANJARI JARUHAR",
-    image: "/authors/manjari-jaruhar.png",
-    designation: "CHIEF & AUTHOR"
+    name: "SUKESH VERMA",
+    image: "/authors/sukesh-verma.png",
+    designation: "AUTHOR, CREATOR & SPEAKER"
   },
   {
     name: "HARSHALI SINGH",

@@ -43,9 +43,9 @@ export const ChiefAuthorCard: React.FC<ChiefAuthorCard> = ({ chiefAuthor }) => {
         <Image
           alt={`Photo of ${chiefAuthor.name}`}
           src={chiefAuthor.image}
-          width={215}
-          height={277}
-          className="rounded-lg"
+          width={200} // Set a fixed width
+          height={250} // Set a fixed height
+          className="rounded-lg object-cover w-[200px] h-[250px]"
         />
         <div className={`text-center mt-4`}>
           <h4 className={`text-2xl font-black`}>{chiefAuthor.name}</h4>
@@ -126,12 +126,13 @@ export const Authors2k25: React.FC<AuthorsProps> = ({
           {chiefAuthors.slice(2).map((person, i) => (
             <div key={i} className="flex flex-col items-center">
               <Image
-                alt={`Photo of ${person.name}`}
-                src={person.image}
-                width={160}
-                height={160}
-                className="rounded-lg mb-3"
-              />
+  alt={`Photo of ${person.name}`}
+  src={person.image}
+  width={200} // Set a fixed width
+  height={250} // Set a fixed height
+  className="rounded-lg object-cover w-[200px] h-[250px]"
+/>
+
               <h4 className="text-lg font-bold text-center">{person.name}</h4>
               <p className="text-sm text-gray-600 text-center">{person.designation}</p>
             </div>
