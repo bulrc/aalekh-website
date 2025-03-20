@@ -28,13 +28,13 @@ export const Itinerary: React.FC<ItineraryProps> = ({}) => {
   }, []);
 
   return mounted ? (
-    <Wrapper className="py-10 md:py-16" id="itinerary">
-      <div className="pb-16 min-[920px]:pb-24">
+    <Wrapper className="w-full py-10 md:py-16 px-4 sm:px-10" id="itinerary">
+      <div className="pb-16 min-[920px]:pb-24 text-center">
         <span className={cn(BERKSHIRE_SWASH.className, "heading")}>
           Itiner<span className="text-primary">a</span>ry
         </span>
       </div>
-      <div className="w-full mx-auto">
+      <div className="w-full mx-auto overflow-x-auto">
         <Tabs
           defaultValue="day1"
           className={cn(INTER.className, "text-sm font-medium")}
@@ -55,9 +55,8 @@ export const Itinerary: React.FC<ItineraryProps> = ({}) => {
           </div>
 
           <TabsContent value="day1">
-            {/* Responsive container added */}
             <div className="overflow-x-auto">
-              <Table className={cn(INTER.className, "text-sm font-medium min-w-[320px]")}>
+              <Table className={cn(INTER.className, "text-sm font-medium w-full")}>
                 <TableHeader>
                   <TableRow>
                     <TableHead className="text-center font-extrabold w-auto md:w-[200px]">
@@ -167,7 +166,7 @@ export const Itinerary: React.FC<ItineraryProps> = ({}) => {
 
           <TabsContent value="day2">
             <div className="overflow-x-auto">
-              <Table className={cn(INTER.className, "text-sm font-medium min-w-[320px]")}>
+              <Table className={cn(INTER.className, "text-sm font-medium w-full")}>
                 <TableHeader>
                   <TableRow>
                     <TableHead className="text-center font-extrabold w-auto md:w-[200px]">
