@@ -77,30 +77,32 @@ export const Itinerary: React.FC<ItineraryProps> = ({}) => {
                     <TableCell>10:35 AM – 10:40 AM</TableCell>
                     <TableCell>Lamp Lighting</TableCell>
                     <TableCell>
-                      Chief Guest, Shri Ashok Kumar, IPS (Retd.), Dr. Ramesh C. Gaur,
-                      Esteemed Guests, Director – Library, VP – Marketing & Admissions,
-                      Secretary - Cerebrum
+                      Chief Guest, Shri Ashok Kumar, IPS (Retd.), Dr. Ramesh C. Gaur, Guest of Honour,
+                      Director – Library, VP – Marketing & Admissions, Secretary – Cerebrum
                     </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>10:40 AM – 10:45 AM</TableCell>
                     <TableCell>Welcome Address</TableCell>
-                    <TableCell>VP – Marketing & Admissions</TableCell>
+                    <TableCell>Ms. Hitankshi Thukral, VP – Marketing & Admissions</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>10:45 AM – 10:50 AM</TableCell>
                     <TableCell>The Journey of Aalekh</TableCell>
-                    <TableCell>Dr. Sanjay Kataria, Director - Library</TableCell>
+                    <TableCell>Prof. (Dr.) Sanjay Kataria, Director - Library</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>10:50 AM – 11:10 AM</TableCell>
-                    <TableCell>Address by Distinguished Guest</TableCell>
-                    <TableCell>Dr. Ramesh C Gaur, Director – Kalanidhi, IGNCA</TableCell>
+                    <TableCell>Address by Guest of Honour</TableCell>
+                    <TableCell>Prof. (Dr.) Ramesh C Gaur, Professor and Dean (Admin), IGNCA</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>11:10 AM – 11:30 AM</TableCell>
-                    <TableCell>Inaugural Address by Guest of Honour</TableCell>
-                    <TableCell>Shri. Ashok Kumar, IPS (Retd), Former DGP Uttarakhand</TableCell>
+                    <TableCell>Inaugural Address by Chief Guest</TableCell>
+                    <TableCell>
+                      Shri. Ashok Kumar, IPS (Retd), Former DGP Uttarakhand & Presently Vice-Chancellor, NLU Sonipat,
+                      Vice-Chancellor, Sports University of Haryana, Rai
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>11:30 AM – 11:45 AM</TableCell>

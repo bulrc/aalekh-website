@@ -74,7 +74,7 @@ export const AUTHOR_DATA_2k25: AuthorData2k25[] = [
     designation: "FOOD BLOGGER"
   },
   {
-    name: "DR. RITU SOBYAN",
+    name: "DR. RITU SORYAN",
     image: "/authors/ritu-sobyan.png",
     designation: "JOURNALIST"
   }
