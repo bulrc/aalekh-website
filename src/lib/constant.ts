@@ -9,13 +9,19 @@ export const BREAKPOINTS = {
 };
 export const CHIEF_AUTHOR_DATA_2k25: ChiefAuthorData2k25[] = [
   {
-    name: "ASHOK KUMAR",
+    name: "MR. ASHOK KUMAR",
     title: "Guest of Honour",
     image: "/authors/ashok-kumar.png",
     designation: "IPS OFFICER"
   },
   {
-    "name": "RAMESH C GAUR",
+    name: "MR. VIVEK ATRAY",
+    title: "Guest of Honour",
+    image: "/authors/vivek-atray.png",
+    designation: "EMINENT AUTHOR"
+  },
+  {
+    "name": "DR. RAMESH C GAUR",
     "title": "Guest of Honour",
     "image": "/authors/ramesh-gaur.png",
     "designation": "Dean & Director (Library & Information), IGNCA"
@@ -24,47 +30,42 @@ export const CHIEF_AUTHOR_DATA_2k25: ChiefAuthorData2k25[] = [
 
 export const AUTHOR_DATA_2k25: AuthorData2k25[] = [
   {
-    name: "VIVEK ATRAY",
-    image: "/authors/vivek-atray.png",
-    designation: "EMINENT AUTHOR"
-  },
-  {
-    name: "KARNAL SINGH",
+    name: "MR. KARNAL SINGH",
     image: "/authors/karnal-singh.png",
     designation: "ASSOCIATE EDITOR"
   },
   {
-    name: "MANJARI JARUHAR",
+    name: "MS. MANJARI JARUHAR",
     image: "/authors/manjari-jaruhar.png",
     designation: "CHIEF & AUTHOR"
   },
   {
-    name: "BEETASHOK CHATTERJEE",
+    name: "CAPT. BEETASHOK CHATTERJEE",
     image: "/authors/reetashok-chatterjee.png",
     designation: "CONSUMER INFORMATION SOURCE"
   },
   {
-    name: "SUKESH VERMA",
+    name: "COL. SUKESH VERMA",
     image: "/authors/sukesh-verma.png",
     designation: "AUTHOR, CREATOR & SPEAKER"
   },
   {
-    name: "HARSHALI SINGH",
+    name: "MS. HARSHALI SINGH",
     image: "/authors/harshali-singh.png",
     designation: "AUTHOR, CREATOR & SPEAKER"
   },
   {
-    name: "SUTAPA BASU",
+    name: "MS. SUTAPA BASU",
     image: "/authors/sutapa-basu.png",
     designation: "AUTHOR & PUBLIC SPEAKER"
   },
   {
-    name: "PARVATI SHARMA",
+    name: "MS. PARVATI SHARMA",
     image: "/authors/parvati-sharma.png",
     designation: "INTERVIEWER & AUTHOR"
   },
   {
-    name: "ANSHUMAN KAMTHAN",
+    name: "DR. ANSHUMAN KAMTHAN",
     image: "/authors/anshuman-kamthan.png",
     designation: "ENGINEER & AUTHOR"
   },
